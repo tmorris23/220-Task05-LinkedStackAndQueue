@@ -19,7 +19,6 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public T pop() {
-        // TODO
         return null;
     }
 
@@ -30,7 +29,7 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public void makeEmpty() {
-        // TODO
+        top = null;
     }
     
 }
