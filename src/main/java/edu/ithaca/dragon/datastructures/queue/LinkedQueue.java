@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.datastructures.queue;
 
 import edu.ithaca.dragon.datastructures.node.LinkedNode;
+import java.util.NoSuchElementException;
 
 public class LinkedQueue<T> implements Queue<T>{
 
@@ -27,15 +28,20 @@ public class LinkedQueue<T> implements Queue<T>{
 
     @Override
     public T dequeue() {
-        LinkedNode <T> returnVal = front;
-        front = front.getNext();
-        return returnVal.getItem();
+        if (front ==null){
+            throw new NoSuchElementException();
+        }
+        else{
+            LinkedNode <T> returnVal = front;
+            front = front.getNext();
+            return returnVal.getItem();
+        }
+     
     }
 
     @Override
     public boolean isEmpty() {
-         return front == null;
-        
+            return front == null;
     }
 
     @Override
