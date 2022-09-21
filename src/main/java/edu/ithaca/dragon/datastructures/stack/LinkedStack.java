@@ -19,7 +19,9 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public T pop() {
-        return null;
+        LinkedNode<T> returnVal = top;
+        top = top.getNext();
+        return returnVal.getItem();
     }
 
     @Override
