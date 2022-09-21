@@ -38,7 +38,8 @@ public class LinkedQueue<T> implements Queue<T>{
 
     @Override
     public void makeEmpty() {
-        // TODO
+        front = null;
+        end = null;
     }
     
 }
