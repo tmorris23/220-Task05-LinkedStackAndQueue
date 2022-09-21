@@ -27,13 +27,15 @@ public class LinkedQueue<T> implements Queue<T>{
 
     @Override
     public T dequeue() {
-        // TODO 
-        return null;
+        LinkedNode <T> returnVal = front;
+        front = front.getNext();
+        return returnVal.getItem();
     }
 
     @Override
     public boolean isEmpty() {
-        return front == null;
+         return front == null;
+        
     }
 
     @Override

@@ -23,8 +23,9 @@ public class QueueTest {
 
     @Test
     public void testQueues(){
+        Queue<String> myQueue = new LinkedQueue<>();
         int numToTestWith=1000;
-        enqueueDequeueIsEmptyTest(null, numToTestWith);
+        enqueueDequeueIsEmptyTest(myQueue, numToTestWith);
         testDequeueOnEmpty(null);
         testMakeEmpty(null, numToTestWith);
     }
